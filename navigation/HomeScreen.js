@@ -6,7 +6,7 @@ import List from "../components/list";
 const HomeScreen = () => {
   return (
     <View>
-      <Header />
+      <Header/>
       <List/>
     </View>
   );
