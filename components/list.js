@@ -12,8 +12,13 @@ const List = ({items = ["mark", "jean", "serge"]}) => {
 }
 
 const Item = ({text}) => {
+
+  const _onPressItem = () => {
+    {/*gérer la navigation entre activty https://reactnative.dev/docs/navigation*/}
+  }
+
   return (
-    <ListItem bottomDivider>
+    <ListItem bottomDivider onPress={_onPressItem}>
       <ListItem.Content>
       <ListItem.Title>{text}</ListItem.Title>
       </ListItem.Content>

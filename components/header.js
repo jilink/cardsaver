@@ -7,16 +7,4 @@ const Header = () => {
       <BasicHeader backgroundColor='black' centerComponent={{text: 'CARD SAVER', style:{color: 'white', fontSize: 25}}}/>
   )
 }
-
-const styles = StyleSheet.create({
-  header: {
-    backgroundColor: '#000',
-    flex: 1,
-    flexDirection: 'row',
-  },
-  headerText: {
-    color: '#fff',
-    fontSize: 20,
-  },
-});
 export default Header
