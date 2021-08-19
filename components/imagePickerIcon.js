@@ -46,7 +46,6 @@ const ImagePickerIcon = () => {
       quality: 1,
     });
 
-    console.log(result);
 
     if (!result.cancelled) {
       setImage(result.uri);
@@ -74,9 +73,7 @@ const ImagePickerIcon = () => {
 
     const codes = await getCodes();
     parsedCodes = codes.length ? JSON.parse(codes) : [];
-    console.log("current codes", parsedCodes);
     parsedCodes.push({ name, image, icon });
-    console.log(name, image, icon);
     try {
       await AsyncStorage.setItem("@codes", JSON.stringify(parsedCodes));
       setModalVisible(false);
