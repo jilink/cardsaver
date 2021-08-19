@@ -5,7 +5,7 @@ import { Icon } from 'react-native-elements';
 import { Button } from 'react-native-elements/dist/buttons/Button';
 import ListItem from 'react-native-elements/dist/list/ListItem'
 
-const List = () => {
+const List = ({setImage}) => {
   const [items, setItems] = useState([]);
 
   const getCodes = async () => {
@@ -47,16 +47,26 @@ const List = () => {
           index={index}
           name={item.name}
           icon={item.icon}
+          image={item.image}
           removeItem={removeItem}
+          setImage={setImage}
         />
       ))}
     </ScrollView>
   );
 };
 
-const Item = ({ index, name, icon = "qrcode", removeItem }) => {
+const Item = ({
+  index,
+  name,
+  icon = "qrcode",
+  image = "",
+  removeItem,
+  setImage,
+}) => {
   const _onPressItem = () => {
     {
+      setImage(image)
       /*gérer la navigation entre activty https://reactnative.dev/docs/navigation*/
     }
   };
